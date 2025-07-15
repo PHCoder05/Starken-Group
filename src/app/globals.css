@@ -1,26 +1,448 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@layer base {
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 220 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 220 100% 50%;
+    --radius: 0.75rem;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+    /* Starken Group Brand Colors */
+    --starken-blue: 220 100% 50%;
+    --starken-blue-light: 220 100% 60%;
+    --starken-blue-dark: 220 100% 40%;
+    --starken-orange: 25 95% 53%;
+    --starken-orange-light: 25 95% 63%;
+    --starken-orange-dark: 25 95% 43%;
+    --starken-gray: 220 9% 46%;
+    --starken-gray-light: 220 9% 56%;
+    --starken-gray-dark: 220 9% 36%;
+    
+    /* Real Estate Color Scheme */
+    --luxury-gold: 45 100% 51%;
+    --luxury-gold-foreground: 0 0% 0%;
+    --property-green: 142 76% 36%;
+    --property-green-foreground: 0 0% 98%;
+    --premium-blue: 220 100% 50%;
+    --premium-blue-foreground: 0 0% 98%;
+    --elegant-gray: 220 9% 46%;
+    --elegant-gray-foreground: 0 0% 98%;
+    --warm-beige: 39 77% 83%;
+    --warm-beige-foreground: 0 0% 0%;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --font-inter: 'Inter', system-ui, sans-serif;
+    --font-poppins: 'Poppins', system-ui, sans-serif;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+  }
+
+  * {
+    @apply border-[hsl(var(--border))];
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Modern Typography Scale */
+  h1, .h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-display font-black leading-tight tracking-tight;
+  }
+
+  h2, .h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-display font-bold leading-tight tracking-tight;
+  }
+
+  h3, .h3 {
+    @apply text-2xl md:text-3xl lg:text-4xl font-display font-bold leading-snug;
+  }
+
+  h4, .h4 {
+    @apply text-xl md:text-2xl lg:text-3xl font-display font-semibold leading-snug;
+  }
+
+  h5, .h5 {
+    @apply text-lg md:text-xl lg:text-2xl font-display font-semibold leading-normal;
+  }
+
+  h6, .h6 {
+    @apply text-base md:text-lg lg:text-xl font-display font-medium leading-normal;
+  }
+
+  /* Body text styles */
+  .text-body-lg {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+
+  .text-body {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+
+  .text-body-sm {
+    @apply text-sm md:text-base leading-relaxed;
+  }
+
+  /* Display text for heroes */
+  .text-display {
+    @apply text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-black leading-none tracking-tighter;
+  }
+
+  .text-display-sm {
+    @apply text-4xl md:text-5xl lg:text-6xl font-display font-black leading-tight tracking-tight;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-400 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-600;
+  }
+
+  /* Selection */
+  ::selection {
+    @apply bg-primary-200 text-primary-900;
+  }
+
+  /* Focus styles */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary-500 ring-offset-2;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Construction themed components */
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .heading-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-construction-orange bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .construction-shadow {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+
+  /* Button animations */
+  .btn-hover {
+    @apply transition-all duration-300 hover:shadow-glow hover:-translate-y-0.5 active:scale-95;
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-glow-lg hover:-translate-y-1;
+  }
+
+  /* Gradient backgrounds */
+  .bg-construction-gradient {
+    background: linear-gradient(135deg, #0ea5e9 0%, #f97316 100%);
+  }
+
+  .bg-hero-gradient {
+    background: linear-gradient(135deg, #0c4a6e 0%, #075985 25%, #0369a1 50%, #f97316 100%);
+  }
+
+  /* Text animations */
+  .text-shimmer {
+    background: linear-gradient(
+      110deg,
+      #000 45%,
+      #fff 55%,
+      #000 65%
+    );
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 2s linear infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  /* Modern real estate specific animations */
+  .property-reveal {
+    animation: propertyReveal 1s ease-out forwards;
+  }
+
+  @keyframes propertyReveal {
+    0% {
+      opacity: 0;
+      transform: translateY(30px) scale(0.95);
+    }
+    50% {
+      opacity: 0.8;
+      transform: translateY(15px) scale(0.98);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Enhanced hover effects */
+  .luxury-hover {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .luxury-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 20px rgba(247, 147, 26, 0.3);
+  }
+
+  /* Sophisticated text reveal */
+  .text-reveal {
+    animation: textReveal 0.8s ease-out forwards;
+  }
+
+  @keyframes textReveal {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+      letter-spacing: 0.1em;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      letter-spacing: normal;
+    }
+  }
+
+  /* Construction industry specific animations */
+  .building-animation {
+    animation: buildUp 2s ease-out forwards;
+  }
+
+  @keyframes buildUp {
+    0% {
+      height: 0;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      height: 100%;
+      opacity: 1;
+    }
+  }
+
+  /* Floating elements */
+  .float {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  @keyframes floating {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Progress bar */
+  .progress-bar {
+    @apply h-2 bg-gray-200 rounded-full overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply h-full bg-gradient-to-r from-primary-500 to-construction-orange rounded-full transition-all duration-1000;
+  }
+
+  /* Loading animations */
+  .loading-dots {
+    @apply flex space-x-1;
+  }
+
+  .loading-dots div {
+    @apply w-2 h-2 bg-primary-500 rounded-full animate-bounce;
+  }
+
+  .loading-dots div:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .loading-dots div:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  /* Image overlays */
+  .image-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent;
+  }
+
+  /* Typography */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Custom utilities for construction theme */
+  .border-construction {
+    border-image: linear-gradient(45deg, #0ea5e9, #f97316) 1;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Construction industry specific utilities */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  /* Grid utilities for construction layouts */
+  .grid-construction {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  /* Responsive text sizes for construction content */
+  .text-responsive-sm {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+  }
+
+  .text-responsive-base {
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+  }
+
+  .text-responsive-lg {
+    font-size: clamp(1.125rem, 3vw, 1.25rem);
+  }
+
+  .text-responsive-xl {
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+  }
+
+  .text-responsive-2xl {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .text-responsive-3xl {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
+  .text-responsive-4xl {
+    font-size: clamp(2.5rem, 7vw, 4rem);
+  }
+
+  /* Blob Animation */
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
 }
