@@ -23,7 +23,11 @@ const portfolioProjects = [
     image: "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     completionDate: "December 2023",
     value: "₹125 Crores",
-    features: ["AAC Block Construction", "Energy Efficient Design", "Premium Finishing"]
+    features: ["AAC Block Construction", "Energy Efficient Design", "Premium Finishing"],
+    status: "Completed",
+    location: "Mumbai, Maharashtra",
+    year: "2023",
+    size: "2.5 Lakh sq ft"
   },
   {
     id: 2,
@@ -33,7 +37,11 @@ const portfolioProjects = [
     image: "https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     completionDate: "March 2023",
     value: "₹200 Crores",
-    features: ["Readymix Plaster", "Premium Tiles", "Advanced Electrical Systems"]
+    features: ["Readymix Plaster", "Premium Tiles", "Advanced Electrical Systems"],
+    status: "Completed",
+    location: "Pune, Maharashtra",
+    year: "2023",
+    size: "3.2 Lakh sq ft"
   },
   {
     id: 3,
@@ -43,7 +51,11 @@ const portfolioProjects = [
     image: "https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     completionDate: "August 2023",
     value: "₹180 Crores",
-    features: ["Structural Grade Cement", "Safety Compliant Materials", "Modern Infrastructure"]
+    features: ["Structural Grade Cement", "Safety Compliant Materials", "Modern Infrastructure"],
+    status: "Completed",
+    location: "Bangalore, Karnataka",
+    year: "2023",
+    size: "4.1 Lakh sq ft"
   },
   {
     id: 4,
@@ -53,7 +65,11 @@ const portfolioProjects = [
     image: "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     completionDate: "June 2023",
     value: "₹150 Crores",
-    features: ["Medical Grade Materials", "Specialized Adhesives", "Hygiene Compliant Construction"]
+    features: ["Medical Grade Materials", "Specialized Adhesives", "Hygiene Compliant Construction"],
+    status: "Completed",
+    location: "Hyderabad, Telangana",
+    year: "2023",
+    size: "1.8 Lakh sq ft"
   },
   {
     id: 5,
@@ -63,7 +79,11 @@ const portfolioProjects = [
     image: "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     completionDate: "October 2023",
     value: "₹95 Crores",
-    features: ["Heavy-Duty Anchors", "Industrial Fasteners", "Durable Flooring Solutions"]
+    features: ["Heavy-Duty Anchors", "Industrial Fasteners", "Durable Flooring Solutions"],
+    status: "Completed",
+    location: "Chennai, Tamil Nadu",
+    year: "2023",
+    size: "5.5 Lakh sq ft"
   },
   {
     id: 6,
@@ -73,7 +93,11 @@ const portfolioProjects = [
     image: "https://images.pexels.com/photos/2977304/pexels-photo-2977304.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     completionDate: "January 2024",
     value: "₹300 Crores",
-    features: ["Multi-Grade Cement", "Versatile Adhesives", "Smart Home Automation"]
+    features: ["Multi-Grade Cement", "Versatile Adhesives", "Smart Home Automation"],
+    status: "Completed",
+    location: "Delhi NCR",
+    year: "2024",
+    size: "6.8 Lakh sq ft"
   }
 ];
 
