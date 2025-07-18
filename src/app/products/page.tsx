@@ -4,6 +4,19 @@ import Navbar from '@/components/navigation/navbar';
 import Footer from '@/components/layout/footer';
 import CtaSection from '@/components/sections/cta-section';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+
+// Import product images
+import aacBlocksImg from '@/assets/images/products/AAC BLOCKS.jpg';
+import plasterImg from '@/assets/images/products/PLASTER.jpg';
+import couplerImg from '@/assets/images/products/COUPLER.jpg';
+import cementImg from '@/assets/images/products/CEMENT.png';
+import electricalImg from '@/assets/images/products/ELECTRICAL WORK.png';
+import anchorsImg from '@/assets/images/products/ANCHORS & FASTENERS.png';
+import tileAdhesivesImg from '@/assets/images/products/TILE _ STONE ADHESIVES.png';
+import marbleAdhesivesImg from '@/assets/images/products/MARBLE ADHESIVES.png';
+import groutImg from '@/assets/images/products/GROUT & MICRO CONCRETE.png';
+import homeAutomationImg from '@/assets/images/products/HOME AUTOMATION.png';
 
 // Construction Materials Products Component
 function ConstructionProductsSection() {
@@ -15,7 +28,7 @@ function ConstructionProductsSection() {
       color: "from-blue-500 to-blue-600",
       bgColor: "bg-blue-50",
       textColor: "text-blue-600",
-      image: "/assets/products/AAC BLOCKS.jpg"
+      image: aacBlocksImg
     },
     {
       title: "READYMIX PLASTER",
@@ -24,7 +37,7 @@ function ConstructionProductsSection() {
       color: "from-slate-500 to-slate-600",
       bgColor: "bg-slate-50",
       textColor: "text-slate-600",
-      image: "/assets/products/PLASTER.jpg"
+      image: plasterImg
     },
     {
       title: "REBAR COUPLER",
@@ -33,7 +46,7 @@ function ConstructionProductsSection() {
       color: "from-gray-600 to-gray-700",
       bgColor: "bg-gray-50",
       textColor: "text-gray-700",
-      image: "/assets/products/COUPLER.jpg"
+      image: couplerImg
     },
     {
       title: "CEMENT",
@@ -42,7 +55,7 @@ function ConstructionProductsSection() {
       color: "from-stone-500 to-stone-600",
       bgColor: "bg-stone-50",
       textColor: "text-stone-600",
-      image: "/assets/products/CEMENT.png"
+      image: cementImg
     },
     {
       title: "ELECTRICAL WORK",
@@ -51,7 +64,7 @@ function ConstructionProductsSection() {
       color: "from-yellow-500 to-yellow-600",
       bgColor: "bg-yellow-50",
       textColor: "text-yellow-600",
-      image: "/assets/products/ELECTRICAL WORK.png"
+      image: electricalImg
     },
     {
       title: "ANCHORS & FASTENERS",
@@ -60,7 +73,7 @@ function ConstructionProductsSection() {
       color: "from-orange-500 to-orange-600",
       bgColor: "bg-orange-50",
       textColor: "text-orange-600",
-      image: "/assets/products/ANCHORS & FASTENERS.png"
+      image: anchorsImg
     },
     {
       title: "TILE / STONE ADHESIVES",
@@ -69,7 +82,7 @@ function ConstructionProductsSection() {
       color: "from-emerald-500 to-emerald-600",
       bgColor: "bg-emerald-50",
       textColor: "text-emerald-600",
-      image: "/assets/products/TILE _ STONE ADHESIVES.png"
+      image: tileAdhesivesImg
     },
     {
       title: "MARBLE ADHESIVES",
@@ -78,7 +91,7 @@ function ConstructionProductsSection() {
       color: "from-purple-500 to-purple-600",
       bgColor: "bg-purple-50",
       textColor: "text-purple-600",
-      image: "/assets/products/MARBLE ADHESIVES.png"
+      image: marbleAdhesivesImg
     },
     {
       title: "GROUT & MICRO CONCRETE",
@@ -87,7 +100,7 @@ function ConstructionProductsSection() {
       color: "from-indigo-500 to-indigo-600",
       bgColor: "bg-indigo-50",
       textColor: "text-indigo-600",
-      image: "/assets/products/GROUT & MICRO CONCRETE.png"
+      image: groutImg
     },
     {
       title: "HOME AUTOMATION",
@@ -96,7 +109,7 @@ function ConstructionProductsSection() {
       color: "from-teal-500 to-teal-600",
       bgColor: "bg-teal-50",
       textColor: "text-teal-600",
-      image: "/assets/products/HOME AUTOMATION.png"
+      image: homeAutomationImg
     }
   ];
 
@@ -125,10 +138,14 @@ function ConstructionProductsSection() {
               >
                 {/* Product Image */}
                 <div className="relative h-48 overflow-hidden">
-                  <img
+                  <Image
                     src={product.image}
                     alt={product.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                    priority={index < 4} // Prioritize first 4 images
+                    quality={85}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
