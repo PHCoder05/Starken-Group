@@ -14,45 +14,45 @@ const clientCategories = [
   {
     name: "Government & PSUs",
     clients: [
-      { name: "NHPC Limited", logo: "/api/placeholder/200/100", sector: "Power Generation" },
-      { name: "NHAI", logo: "/api/placeholder/200/100", sector: "Highway Infrastructure" },
-      { name: "Delhi Development Authority", logo: "/api/placeholder/200/100", sector: "Urban Development" },
-      { name: "Reserve Bank of India", logo: "/api/placeholder/200/100", sector: "Banking" },
-      { name: "Indian Railways", logo: "/api/placeholder/200/100", sector: "Transportation" },
-      { name: "AIIMS", logo: "/api/placeholder/200/100", sector: "Healthcare" }
+      { name: "NHPC Limited", logo: "https://images.pexels.com/photos/210243/pexels-photo-210243.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Power Generation" },
+      { name: "NHAI", logo: "https://images.pexels.com/photos/461073/pexels-photo-461073.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Highway Infrastructure" },
+      { name: "Delhi Development Authority", logo: "https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Urban Development" },
+      { name: "Reserve Bank of India", logo: "https://images.pexels.com/photos/259600/pexels-photo-259600.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Banking" },
+      { name: "Indian Railways", logo: "https://images.pexels.com/photos/221357/pexels-photo-221357.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Transportation" },
+      { name: "AIIMS", logo: "https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Healthcare" }
     ]
   },
   {
     name: "Corporate Giants",
     clients: [
-      { name: "Reliance Industries", logo: "/api/placeholder/200/100", sector: "Petrochemicals" },
-      { name: "L&T Limited", logo: "/api/placeholder/200/100", sector: "Engineering" },
-      { name: "Tata Group", logo: "/api/placeholder/200/100", sector: "Conglomerate" },
-      { name: "Tech Mahindra", logo: "/api/placeholder/200/100", sector: "IT Services" },
-      { name: "Wipro", logo: "/api/placeholder/200/100", sector: "Technology" },
-      { name: "Infosys", logo: "/api/placeholder/200/100", sector: "IT Services" }
+      { name: "Reliance Industries", logo: "https://images.pexels.com/photos/257447/pexels-photo-257447.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Petrochemicals" },
+      { name: "L&T Limited", logo: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Engineering" },
+      { name: "Tata Group", logo: "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Conglomerate" },
+      { name: "Tech Mahindra", logo: "https://images.pexels.com/photos/256401/pexels-photo-256401.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "IT Services" },
+      { name: "Wipro", logo: "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Technology" },
+      { name: "Infosys", logo: "https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "IT Services" }
     ]
   },
   {
     name: "Healthcare & Education",
     clients: [
-      { name: "Apollo Hospitals", logo: "/api/placeholder/200/100", sector: "Healthcare" },
-      { name: "Fortis Healthcare", logo: "/api/placeholder/200/100", sector: "Medical Services" },
-      { name: "Manipal Group", logo: "/api/placeholder/200/100", sector: "Education" },
-      { name: "Symbiosis International", logo: "/api/placeholder/200/100", sector: "Education" },
-      { name: "Bharti Vidyapeeth", logo: "/api/placeholder/200/100", sector: "Education" },
-      { name: "KEM Hospital", logo: "/api/placeholder/200/100", sector: "Healthcare" }
+      { name: "Apollo Hospitals", logo: "https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Healthcare" },
+      { name: "Fortis Healthcare", logo: "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Medical Services" },
+      { name: "Manipal Group", logo: "https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Education" },
+      { name: "Symbiosis International", logo: "https://images.pexels.com/photos/256395/pexels-photo-256395.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Education" },
+      { name: "Bharti Vidyapeeth", logo: "https://images.pexels.com/photos/207684/pexels-photo-207684.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Education" },
+      { name: "KEM Hospital", logo: "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Healthcare" }
     ]
   },
   {
     name: "Real Estate & Retail",
     clients: [
-      { name: "Godrej Properties", logo: "/api/placeholder/200/100", sector: "Real Estate" },
-      { name: "Phoenix Mills", logo: "/api/placeholder/200/100", sector: "Retail" },
-      { name: "Oberoi Realty", logo: "/api/placeholder/200/100", sector: "Real Estate" },
-      { name: "Brigade Group", logo: "/api/placeholder/200/100", sector: "Real Estate" },
-      { name: "DLF Limited", logo: "/api/placeholder/200/100", sector: "Real Estate" },
-      { name: "Prestige Group", logo: "/api/placeholder/200/100", sector: "Real Estate" }
+      { name: "Godrej Properties", logo: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Real Estate" },
+      { name: "Phoenix Mills", logo: "https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Retail" },
+      { name: "Oberoi Realty", logo: "https://images.pexels.com/photos/210617/pexels-photo-210617.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Real Estate" },
+      { name: "Brigade Group", logo: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Real Estate" },
+      { name: "DLF Limited", logo: "https://images.pexels.com/photos/210617/pexels-photo-210617.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Real Estate" },
+      { name: "Prestige Group", logo: "https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg?auto=compress&cs=tinysrgb&w=600", sector: "Real Estate" }
     ]
   }
 ]
@@ -62,43 +62,43 @@ const testimonials = [
     id: 1,
     name: "Rajesh Kumar",
     position: "Project Director",
-    company: "Amar Builders & Developers",
-    content: "Starken Group has been our trusted partner for over 8 years. Their commitment to quality and timely delivery has helped us complete 25+ residential projects successfully. The attention to detail and innovative solutions they provide is unmatched in the industry.",
+    company: "NHPC Limited",
+    image: "https://images.pexels.com/photos/937481/pexels-photo-937481.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    content: "Starken Group's expertise in construction materials supply has been instrumental in our project success. Their quality AAC blocks and cement have exceeded our expectations.",
     rating: 5,
-    image: "/api/placeholder/80/80",
-    project: "Amar Heights - 500 unit residential complex"
+    project: "Power Plant Construction - 10,000+ Tons Material Supply"
   },
   {
     id: 2,
-    name: "Dr. Priya Sharma",
-    position: "Infrastructure Head",
-    company: "Hindustan Aeronautics Limited (HAL)",
-    content: "Working with Starken Group on our aerospace facility was a remarkable experience. They understood our unique requirements and delivered a world-class manufacturing facility that meets international standards. Their expertise in industrial construction is truly impressive.",
+    name: "Priya Sharma",
+    position: "Senior Manager",
+    company: "L&T Limited",
+    image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    content: "The reliability and consistency of Starken's construction materials have made them our preferred supplier for multiple projects. Excellent quality control and timely delivery.",
     rating: 5,
-    image: "/api/placeholder/80/80",
-    project: "HAL Aerospace Manufacturing Unit - 200,000 sq ft"
+    project: "Infrastructure Development - 500+ Metric Tons Materials"
   },
   {
     id: 3,
     name: "Amit Patel",
-    position: "Managing Director",
-    company: "Phoenix Mills Limited",
-    content: "Starken Group's execution of our mall project exceeded all expectations. From concept to completion, they maintained the highest standards of quality while adhering to strict timelines. Their team's professionalism and technical expertise made the entire process seamless.",
+    position: "Operations Head",
+    company: "Tata Group",
+    image: "https://images.pexels.com/photos/842571/pexels-photo-842571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    content: "Starken's comprehensive range of construction materials from readymix plaster to electrical components has streamlined our procurement process significantly.",
     rating: 5,
-    image: "/api/placeholder/80/80",
-    project: "Phoenix Mall Extension - 300,000 sq ft retail space"
+    project: "Commercial Complex - 2,000+ Tonnes Cement & Materials"
   },
   {
     id: 4,
-    name: "Sanjay Gupta",
-    position: "Chief Engineer",
-    company: "NHPC Limited",
-    content: "For critical infrastructure projects like ours, we need partners who understand precision and quality. Starken Group has consistently delivered exceptional results for our power generation facilities. Their innovative approach and commitment to safety is commendable.",
+    name: "Dr. Sunita Mehta",
+    position: "Infrastructure Head",
+    company: "Apollo Hospitals",
+    image: "https://images.pexels.com/photos/936119/pexels-photo-936119.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    content: "For our healthcare facility construction, Starken provided medical-grade materials and specialized adhesives that met all our stringent quality requirements.",
     rating: 5,
-    image: "/api/placeholder/80/80",
-    project: "Hydroelectric Power Plant Infrastructure"
+    project: "Healthcare Facility - Medical Grade Materials Supply"
   }
-]
+];
 
 const stats = [
   { label: "Satisfied Clients", value: "200+", icon: Users },

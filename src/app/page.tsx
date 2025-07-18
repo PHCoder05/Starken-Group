@@ -2,7 +2,6 @@ import Navbar from '@/components/navigation/navbar';
 import { HeroSection } from '@/components/sections/hero-section';
 import ServicesSection from '@/components/sections/services-section';
 import AboutPreview from '@/components/sections/about-preview';
-import PortfolioShowcase from '@/components/sections/portfolio-showcase';
 import StatsSection from '@/components/sections/stats-section';
 import TestimonialsSection from '@/components/sections/testimonials-section';
 import CtaSection from '@/components/sections/cta-section';
@@ -16,17 +15,14 @@ export default function HomePage() {
         {/* Hero Section */}
         <HeroSection />
         
+        {/* Materials Showcase Section */}
+        <ServicesSection />
+        
         {/* Stats Section */}
         <StatsSection />
         
-        {/* Services Section */}
-        <ServicesSection />
-        
         {/* About Preview */}
         <AboutPreview />
-        
-        {/* Portfolio Showcase */}
-        <PortfolioShowcase />
         
         {/* Testimonials */}
         <TestimonialsSection />

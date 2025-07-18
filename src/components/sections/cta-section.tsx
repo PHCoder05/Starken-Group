@@ -2,20 +2,20 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, Phone, Mail, MapPin, Clock, CheckCircle, Star } from 'lucide-react'
+import { ArrowRight, Phone, Mail, MapPin, Clock, CheckCircle, Star, Package, Truck, Calculator } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const ctaFeatures = [
   {
-    icon: CheckCircle,
-    text: "Free Project Consultation"
+    icon: Package,
+    text: "Free Material Consultation"
   },
   {
     icon: Star,
-    text: "Award-Winning Quality"
+    text: "ISO Certified Quality"
   },
   {
-    icon: Clock,
+    icon: Truck,
     text: "On-Time Delivery Guarantee"
   }
 ]
@@ -43,17 +43,17 @@ export default function CtaSection() {
             {/* Header */}
             <div>
               <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-starken-blue/10 to-starken-orange/10 text-starken-blue text-sm font-semibold mb-6">
-                <Phone className="w-5 h-5 mr-2" />
-                Get Started Today
+                <Calculator className="w-5 h-5 mr-2" />
+                Get Your Quote Now
               </div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-6">
-                Ready to Build Your{" "}
-                <span className="heading-gradient">Dream Project?</span>
+                Need Quality Materials{" "}
+                <span className="heading-gradient">For Your Project?</span>
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Let's discuss your construction needs and create something extraordinary together. 
-                Our team of experts is ready to transform your vision into reality with precision, 
-                quality, and innovation.
+                Get competitive quotes for bulk construction materials and enjoy volume discounts. 
+                Our experts will help you choose the right materials for your project with 
+                quality assurance and timely delivery.
               </p>
             </div>
 
@@ -86,11 +86,11 @@ export default function CtaSection() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-starken-blue" />
-                  <span className="text-gray-700">info@starkengroup.com</span>
+                  <span className="text-gray-700">materials@starkengroup.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-starken-blue" />
-                  <span className="text-gray-700">Multiple locations across India</span>
+                  <span className="text-gray-700">Warehouse locations across India</span>
                 </div>
               </div>
             </div>
@@ -111,27 +111,27 @@ export default function CtaSection() {
               
               <div className="relative z-10">
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-                  Get Your Free Quote
+                  Get Material Quote
                 </h3>
                 <p className="text-gray-600 mb-8">
-                  Fill out the form and our experts will get back to you within 24 hours with a detailed consultation.
+                  Fill out the form and our material experts will provide you with competitive pricing within 24 hours.
                 </p>
 
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Full Name *
+                        Company/Name *
                       </label>
                       <input
                         type="text"
                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-starken-blue focus:border-transparent transition-all duration-200"
-                        placeholder="Your full name"
+                        placeholder="Your company name"
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Phone Number *
+                        Contact Number *
                       </label>
                       <input
                         type="tel"
@@ -154,26 +154,30 @@ export default function CtaSection() {
 
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Project Type
+                      Materials Required
                     </label>
                     <select className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-starken-blue focus:border-transparent transition-all duration-200">
-                      <option value="">Select project type</option>
-                      <option value="residential">Residential Construction</option>
-                      <option value="commercial">Commercial Development</option>
-                      <option value="infrastructure">Infrastructure Projects</option>
-                      <option value="renovation">Renovation & Remodeling</option>
-                      <option value="consultation">Consultation Services</option>
+                      <option value="">Select material type</option>
+                      <option value="aac-blocks">AAC Blocks</option>
+                      <option value="cement">Cement</option>
+                      <option value="plaster">Readymix Plaster</option>
+                      <option value="rebar-coupler">Rebar Coupler</option>
+                      <option value="adhesives">Adhesives & Grouts</option>
+                      <option value="electrical">Electrical Solutions</option>
+                      <option value="fasteners">Anchors & Fasteners</option>
+                      <option value="automation">Home Automation</option>
+                      <option value="multiple">Multiple Materials</option>
                     </select>
                   </div>
 
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Project Details
+                      Quantity & Project Details
                     </label>
                     <textarea
                       rows={4}
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-starken-blue focus:border-transparent transition-all duration-200 resize-none"
-                      placeholder="Tell us about your project requirements, timeline, and budget..."
+                      placeholder="Specify quantities needed, project timeline, delivery location, and any special requirements..."
                     />
                   </div>
 
@@ -183,7 +187,7 @@ export default function CtaSection() {
                       size="lg" 
                       className="w-full bg-gradient-to-r from-starken-blue to-starken-orange hover:from-starken-orange hover:to-starken-blue font-semibold shadow-lg hover:shadow-xl transition-all duration-300 group"
                     >
-                      Get Free Consultation
+                      Get Material Quote
                       <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
                     
@@ -194,7 +198,7 @@ export default function CtaSection() {
                         className="border-2 border-starken-blue text-starken-blue hover:bg-starken-blue hover:text-white font-semibold"
                         asChild
                       >
-                        <a href="/projects">View Our Work</a>
+                        <a href="/products">View Products</a>
                       </Button>
                       <Button 
                         variant="ghost" 
@@ -202,7 +206,7 @@ export default function CtaSection() {
                         className="text-starken-blue hover:bg-starken-blue/10 font-semibold"
                         asChild
                       >
-                        <a href="/about">Learn More</a>
+                        <a href="/about">About Us</a>
                       </Button>
                     </div>
                   </div>

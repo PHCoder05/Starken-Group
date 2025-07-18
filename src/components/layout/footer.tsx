@@ -1,32 +1,30 @@
 "use client"
 
 import { motion } from 'framer-motion'
-import { Building2, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight, Award } from 'lucide-react'
+import { Building2, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight, Award, Package, Truck } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
   { name: 'Our Team', href: '/about/team' },
-  { name: 'Milestones', href: '/about/milestones' },
-  { name: 'Certifications', href: '/about/certifications' },
-  { name: 'Gallery', href: '/about/gallery' },
+  { name: 'Warehouse Gallery', href: '/about/gallery' },
 ]
 
 const servicesLinks = [
-  { name: 'Infrastructure', href: '/services/infrastructure' },
-  { name: 'Residential', href: '/services/residential' },
-  { name: 'Commercial', href: '/services/commercial' },
-  { name: 'Engineering', href: '/services/engineering' },
-  { name: 'Consultation', href: '/services/consultation' },
+  { name: 'Construction Materials', href: '/products' },
+  { name: 'Our Clients', href: '/clients' },
+  { name: 'Career', href: '/career' },
+  { name: 'Contact Us', href: '/contact' },
+  { name: 'Industry Insights', href: '/blogs' },
 ]
 
 const quickLinks = [
-  { name: 'Projects', href: '/projects' },
-  { name: 'Industries', href: '/industries' },
+  { name: 'Home', href: '/' },
+  { name: 'About Us', href: '/about' },
+  { name: 'Products', href: '/products' },
   { name: 'Clients', href: '/clients' },
-  { name: 'Career', href: '/career' },
-  { name: 'Blog', href: '/blog' },
+  { name: 'Contact Us', href: '/contact' },
 ]
 
 const socialLinks = [
@@ -52,7 +50,7 @@ export default function Footer({ siteType = 'starken-group' }: FooterProps) {
         return {
           name: 'Starken Constroworld',
           description: 'Leading provider of construction materials and trading solutions.',
-          email: 'info@starkencw.com',
+          email: 'materials@starkencw.com',
           phone: '+91 9876543210',
           address: 'Mumbai, Maharashtra, India'
         }
@@ -67,10 +65,10 @@ export default function Footer({ siteType = 'starken-group' }: FooterProps) {
       default:
         return {
           name: 'Starken Group',
-          description: 'Leading construction and real estate development company transforming landscapes across India.',
-          email: 'info@starkenventure.com',
+          description: 'Leading construction materials supplier providing premium AAC blocks, cement, adhesives, and building solutions across India.',
+          email: 'materials@starkengroup.com',
           phone: '+91 9876543212',
-          address: 'Corporate Office: Mumbai, Maharashtra, India'
+          address: 'Warehouse & Corporate Office: Mumbai, Maharashtra, India'
         }
     }
   }
@@ -94,10 +92,10 @@ export default function Footer({ siteType = 'starken-group' }: FooterProps) {
               className="text-center"
             >
               <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-4">
-                Stay Updated with Our Latest Projects
+                Stay Updated with Latest Material Prices & Products
               </h3>
               <p className="text-lg text-primary-100 mb-8 max-w-2xl mx-auto">
-                Subscribe to our newsletter for updates on new projects, industry insights, and company news.
+                Subscribe to our newsletter for updates on new materials, price notifications, bulk discounts, and industry insights.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                 <input
@@ -128,7 +126,7 @@ export default function Footer({ siteType = 'starken-group' }: FooterProps) {
               {/* Logo */}
               <div className="flex items-center space-x-3 mb-6">
                 <div className="relative">
-                  <Building2 className="h-8 w-8 text-primary-400" />
+                  <Package className="h-8 w-8 text-primary-400" />
                   <div className="absolute -inset-1 bg-primary-400/20 rounded-lg blur" />
                 </div>
                 <span className="font-display font-bold text-xl text-white">
@@ -156,15 +154,23 @@ export default function Footer({ siteType = 'starken-group' }: FooterProps) {
                 </div>
               </div>
 
-              {/* Awards */}
-              <div className="mt-6 p-4 bg-gray-800 rounded-xl border border-gray-700">
-                <div className="flex items-center space-x-2 mb-2">
-                  <Award className="w-5 h-5 text-construction-yellow" />
-                  <span className="font-semibold text-white">ISO Certified Company</span>
+              {/* Awards & Certifications */}
+              <div className="mt-6 space-y-3">
+                <div className="p-4 bg-gray-800 rounded-xl border border-gray-700">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <Award className="w-5 h-5 text-construction-yellow" />
+                    <span className="font-semibold text-white">ISO 9001:2015 Certified</span>
+                  </div>
+                  <p className="text-gray-400 text-xs">
+                    Quality construction materials certified to international standards
+                  </p>
                 </div>
-                <p className="text-gray-400 text-xs">
-                  Quality management systems certified to international standards
-                </p>
+                <div className="p-3 bg-gray-800 rounded-xl border border-gray-700">
+                  <div className="flex items-center space-x-2">
+                    <Truck className="w-4 h-4 text-primary-400" />
+                    <span className="font-medium text-white text-sm">Pan-India Delivery</span>
+                  </div>
+                </div>
               </div>
             </motion.div>
 

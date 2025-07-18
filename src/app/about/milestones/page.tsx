@@ -96,42 +96,42 @@ const achievements = [
     category: "Industry Recognition",
     description: "Recognized for outstanding contribution to real estate development and construction excellence.",
     year: "2023",
-    image: "/api/placeholder/300/200"
+    image: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
     title: "Green Building Council India Award",
     category: "Sustainability",
     description: "Honored for leadership in sustainable construction practices and green building development.",
     year: "2022",
-    image: "/api/placeholder/300/200"
+    image: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
     title: "Best Infrastructure Developer",
     category: "Infrastructure",
     description: "Awarded for excellence in infrastructure development and innovative engineering solutions.",
     year: "2022",
-    image: "/api/placeholder/300/200"
+    image: "https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
     title: "ISO 9001:2015 Certification",
     category: "Quality Management",
     description: "International certification for quality management systems and operational excellence.",
     year: "2021",
-    image: "/api/placeholder/300/200"
+    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
     title: "Construction Week Award",
     category: "Innovation",
     description: "Recognition for innovation in construction technology and project management excellence.",
     year: "2021",
-    image: "/api/placeholder/300/200"
+    image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
     title: "Customer Satisfaction Excellence",
     category: "Client Relations",
     description: "Achieved 98% customer satisfaction rating across all completed projects and services.",
     year: "2020",
-    image: "/api/placeholder/300/200"
+    image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600"
   }
 ]
 

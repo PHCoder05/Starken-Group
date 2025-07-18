@@ -18,7 +18,7 @@ const leadership = [
     education: "MBA - IIM Ahmedabad, B.Tech - IIT Delhi",
     expertise: ["Strategic Planning", "Business Development", "Industry Leadership", "Corporate Governance"],
     bio: "Rajesh founded Starken Group with a vision to revolutionize the construction industry in India. With over 20 years of experience in construction and real estate, he has led the company from a small startup to one of India's leading construction companies.",
-    image: "/api/placeholder/400/400",
+    image: "https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&w=600",
     achievements: [
       "Built 500+ successful projects",
       "Industry Leader Award 2023",
@@ -37,7 +37,7 @@ const leadership = [
     education: "M.Tech - Civil Engineering, B.Tech - Structural Engineering",
     expertise: ["Project Management", "Operations Excellence", "Quality Control", "Team Leadership"],
     bio: "Priya oversees all operational aspects of Starken Group, ensuring project delivery excellence and maintaining the highest quality standards. Her engineering background and operational expertise drive the company's success.",
-    image: "/api/placeholder/400/400",
+    image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=600",
     achievements: [
       "Led 200+ project completions",
       "Operational Excellence Award",
@@ -56,7 +56,7 @@ const leadership = [
     education: "M.Tech - Computer Science, B.Tech - Information Technology",
     expertise: ["Digital Transformation", "Construction Technology", "BIM Implementation", "Innovation Strategy"],
     bio: "Amit drives digital transformation and technology innovation at Starken Group. He leads the implementation of cutting-edge construction technologies and smart building solutions.",
-    image: "/api/placeholder/400/400",
+    image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600",
     achievements: [
       "Led BIM implementation across projects",
       "Technology Innovation Award",
@@ -75,7 +75,7 @@ const leadership = [
     education: "CA, MBA - Finance",
     expertise: ["Financial Planning", "Investment Strategy", "Risk Management", "Corporate Finance"],
     bio: "Sanjay manages the financial strategy and operations of Starken Group, ensuring strong financial performance and sustainable growth while maintaining fiscal responsibility.",
-    image: "/api/placeholder/400/400",
+    image: "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=600",
     achievements: [
       "Managed ₹1000+ Cr portfolio",
       "CFO of the Year Award",
@@ -95,7 +95,7 @@ const teamMembers = [
     department: "Design",
     experience: "12+ Years",
     education: "M.Arch - Urban Planning, B.Arch",
-    image: "/api/placeholder/300/300",
+    image: "https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=600",
     achievements: ["50+ Award-winning designs", "Sustainable Architecture Expert"]
   },
   {
@@ -105,7 +105,7 @@ const teamMembers = [
     department: "Safety",
     experience: "14+ Years",
     education: "M.Tech - Industrial Safety, B.Tech - Mechanical",
-    image: "/api/placeholder/300/300",
+    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
     achievements: ["Zero-accident record", "Safety Excellence Award"]
   },
   {
@@ -115,7 +115,7 @@ const teamMembers = [
     department: "HR",
     experience: "11+ Years",
     education: "MBA - HR, PGDM - Organizational Behavior",
-    image: "/api/placeholder/300/300",
+    image: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=600",
     achievements: ["Best Employer Award", "Team of 200+ professionals"]
   },
   {
@@ -125,7 +125,7 @@ const teamMembers = [
     department: "Business",
     experience: "13+ Years",
     education: "MBA - Marketing, B.Com - Business",
-    image: "/api/placeholder/300/300",
+    image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600",
     achievements: ["₹500+ Cr business generated", "Client Satisfaction 98%"]
   },
   {
@@ -135,7 +135,7 @@ const teamMembers = [
     department: "Engineering",
     experience: "17+ Years",
     education: "M.Tech - Structural Engineering, B.Tech - Civil",
-    image: "/api/placeholder/300/300",
+    image: "https://images.pexels.com/photos/3184340/pexels-photo-3184340.jpeg?auto=compress&cs=tinysrgb&w=600",
     achievements: ["100+ Engineering solutions", "Innovation in Construction"]
   },
   {
@@ -145,7 +145,7 @@ const teamMembers = [
     department: "Quality",
     experience: "10+ Years",
     education: "M.Tech - Quality Management, B.Tech - Industrial",
-    image: "/api/placeholder/300/300",
+    image: "https://images.pexels.com/photos/3184341/pexels-photo-3184341.jpeg?auto=compress&cs=tinysrgb&w=600",
     achievements: ["ISO Implementation Lead", "Quality Excellence Award"]
   }
 ]

@@ -14,80 +14,68 @@ const categories = [
   { id: 'infrastructure', name: 'Infrastructure', icon: Factory, color: 'text-emerald-600' },
 ]
 
-const projects = [
+const portfolioProjects = [
   {
     id: 1,
-    title: "Skyline Residences",
-    category: "residential",
-    location: "Mumbai, Maharashtra",
-    year: "2023",
-    description: "Luxury residential complex with 200+ apartments featuring modern amenities and sustainable design.",
-    image: "/api/placeholder/600/400",
-    status: "Completed",
-    size: "2.5M sq ft",
-    color: "from-blue-500 to-blue-600"
+    title: "Premium Office Complex",
+    category: "Commercial",
+    description: "Modern office complex with innovative design and sustainable features, completed ahead of schedule with top-quality construction materials.",
+    image: "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    completionDate: "December 2023",
+    value: "₹125 Crores",
+    features: ["AAC Block Construction", "Energy Efficient Design", "Premium Finishing"]
   },
   {
     id: 2,
-    title: "Metro Business Center",
-    category: "commercial",
-    location: "Pune, Maharashtra",
-    year: "2022",
-    description: "State-of-the-art commercial complex with office spaces, retail outlets, and conference facilities.",
-    image: "/api/placeholder/600/400",
-    status: "Completed",
-    size: "1.8M sq ft",
-    color: "from-orange-500 to-orange-600"
+    title: "Luxury Residential Towers",
+    category: "Residential",
+    description: "High-end residential project featuring premium construction materials and modern architectural excellence for comfortable living.",
+    image: "https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    completionDate: "March 2023",
+    value: "₹200 Crores",
+    features: ["Readymix Plaster", "Premium Tiles", "Advanced Electrical Systems"]
   },
   {
     id: 3,
-    title: "Highway Bridge Project",
-    category: "infrastructure",
-    location: "Delhi-NCR",
-    year: "2023",
-    description: "Major infrastructure project connecting key transportation routes with modern engineering solutions.",
-    image: "/api/placeholder/600/400",
-    status: "Ongoing",
-    size: "5 km length",
-    color: "from-emerald-500 to-emerald-600"
+    title: "Educational Campus",
+    category: "Institutional",
+    description: "State-of-the-art educational facility built with quality construction materials ensuring durability and safety for students.",
+    image: "https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    completionDate: "August 2023",
+    value: "₹180 Crores",
+    features: ["Structural Grade Cement", "Safety Compliant Materials", "Modern Infrastructure"]
   },
   {
     id: 4,
-    title: "Green Valley Homes",
-    category: "residential",
-    location: "Bangalore, Karnataka",
-    year: "2022",
-    description: "Eco-friendly residential community with solar power, rainwater harvesting, and green spaces.",
-    image: "/api/placeholder/600/400",
-    status: "Completed",
-    size: "1.2M sq ft",
-    color: "from-blue-500 to-blue-600"
+    title: "Healthcare Facility",
+    category: "Healthcare",
+    description: "Modern hospital complex constructed with premium medical-grade materials and advanced construction techniques.",
+    image: "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    completionDate: "June 2023",
+    value: "₹150 Crores",
+    features: ["Medical Grade Materials", "Specialized Adhesives", "Hygiene Compliant Construction"]
   },
   {
     id: 5,
-    title: "Tech Innovation Hub",
-    category: "commercial",
-    location: "Hyderabad, Telangana",
-    year: "2023",
-    description: "Modern technology campus with flexible workspaces, research facilities, and sustainable features.",
-    image: "/api/placeholder/600/400",
-    status: "Ongoing",
-    size: "3.2M sq ft",
-    color: "from-orange-500 to-orange-600"
+    title: "Industrial Warehouse",
+    category: "Industrial",
+    description: "Large-scale warehouse facility built with industrial-grade construction materials for maximum durability and functionality.",
+    image: "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    completionDate: "October 2023",
+    value: "₹95 Crores",
+    features: ["Heavy-Duty Anchors", "Industrial Fasteners", "Durable Flooring Solutions"]
   },
   {
     id: 6,
-    title: "Metro Rail Extension",
-    category: "infrastructure",
-    location: "Chennai, Tamil Nadu",
-    year: "2023",
-    description: "Urban transportation infrastructure expansion improving connectivity and reducing traffic congestion.",
-    image: "/api/placeholder/600/400",
-    status: "Planning",
-    size: "12 km route",
-    color: "from-emerald-500 to-emerald-600"
+    title: "Mixed-Use Development",
+    category: "Mixed-Use",
+    description: "Integrated development combining residential, commercial, and retail spaces using diverse construction materials.",
+    image: "https://images.pexels.com/photos/2977304/pexels-photo-2977304.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    completionDate: "January 2024",
+    value: "₹300 Crores",
+    features: ["Multi-Grade Cement", "Versatile Adhesives", "Smart Home Automation"]
   }
-]
+];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -114,8 +102,8 @@ export default function PortfolioShowcase() {
   const [activeCategory, setActiveCategory] = useState('all')
 
   const filteredProjects = activeCategory === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === activeCategory)
+    ? portfolioProjects 
+    : portfolioProjects.filter(project => project.category === activeCategory)
 
   const getStatusColor = (status: string) => {
     switch (status) {

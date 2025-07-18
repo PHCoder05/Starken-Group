@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from 'framer-motion'
-import { Award, Target, Eye, Heart, Users, Calendar, ArrowRight, Play, Building, CheckCircle, Star, TrendingUp } from 'lucide-react'
+import { Award, Target, Eye, Heart, Warehouse, Calendar, ArrowRight, Package, Truck, CheckCircle, Star, TrendingUp, Factory, Shield } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import Image from 'next/image'
@@ -10,7 +10,7 @@ const values = [
   {
     icon: Target,
     title: "Our Mission",
-    description: "To deliver exceptional construction and real estate solutions that exceed client expectations while maintaining the highest standards of quality, safety, and sustainability.",
+    description: "To provide premium construction materials that exceed industry standards while ensuring reliable supply chain management, competitive pricing, and exceptional customer service.",
     color: "from-blue-500 to-blue-600",
     bgColor: "bg-blue-50",
     textColor: "text-blue-600"
@@ -18,7 +18,7 @@ const values = [
   {
     icon: Eye,
     title: "Our Vision",
-    description: "To be the leading construction company recognized for innovation, excellence, and transforming communities through sustainable infrastructure development.",
+    description: "To be the leading construction materials supplier recognized for innovation, quality assurance, and transforming building projects through reliable material solutions.",
     color: "from-orange-500 to-orange-600",
     bgColor: "bg-orange-50",
     textColor: "text-orange-600"
@@ -26,7 +26,7 @@ const values = [
   {
     icon: Heart,
     title: "Our Values",
-    description: "Integrity, Quality, Innovation, Safety, Sustainability, and Client Satisfaction are the core principles that guide every aspect of our business operations.",
+    description: "Quality Assurance, Reliability, Innovation, Customer Focus, Sustainability, and Integrity are the core principles that guide our materials sourcing and supply operations.",
     color: "from-emerald-500 to-emerald-600",
     bgColor: "bg-emerald-50",
     textColor: "text-emerald-600"
@@ -34,19 +34,19 @@ const values = [
 ]
 
 const achievements = [
-  { icon: Award, label: "ISO Certified", value: "Quality Standards", color: "text-blue-600" },
-  { icon: Users, label: "Expert Team", value: "50+ Professionals", color: "text-orange-600" },
+  { icon: Award, label: "ISO Certified", value: "Quality Materials", color: "text-blue-600" },
+  { icon: Warehouse, label: "Warehouse", value: "50,000 SqFt", color: "text-orange-600" },
   { icon: Calendar, label: "Since 2008", value: "15+ Years", color: "text-emerald-600" },
-  { icon: Building, label: "Projects", value: "500+ Completed", color: "text-purple-600" }
+  { icon: Package, label: "Products", value: "10K+ Supplied", color: "text-purple-600" }
 ]
 
 const features = [
-  "ISO 9001:2015 Certified Quality Management",
-  "Sustainable Construction Practices",
-  "Advanced Project Management",
-  "24/7 Customer Support",
-  "On-Time Project Delivery",
-  "Competitive Pricing"
+  "ISO 9001:2015 Certified Quality Materials",
+  "Sustainable Construction Materials",
+  "Advanced Inventory Management",
+  "24/7 Customer Support & Consultation",
+  "On-Time Delivery Guarantee",
+  "Bulk Order Competitive Pricing"
 ]
 
 const containerVariants = {
@@ -93,15 +93,15 @@ export default function AboutPreview() {
               {/* Header */}
               <div className="space-y-6">
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                  Building Excellence
+                  Quality Materials
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500">
                     Since 2008
                   </span>
                 </h2>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  With over 15 years of experience in construction and real estate, Starken Group 
-                  has established itself as a trusted partner for clients seeking quality, innovation, 
-                  and reliability in every project.
+                  With over 15 years of experience in construction materials supply, Starken Group 
+                  has established itself as a trusted partner for builders seeking quality, reliability, 
+                  and innovation in every construction material.
                 </p>
               </div>
 
@@ -122,12 +122,12 @@ export default function AboutPreview() {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-                  Learn More About Us
+                  Explore Our Materials
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button variant="outline" size="lg" className="border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white group">
-                  <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                  Watch Company Story
+                  <Package className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                  Download Catalog
                 </Button>
               </div>
             </motion.div>
@@ -135,41 +135,54 @@ export default function AboutPreview() {
             {/* Image Side */}
             <motion.div variants={itemVariants} className="relative">
               <div className="relative">
-                <div className="aspect-[4/3] bg-gradient-to-br from-blue-100 to-orange-100 rounded-2xl overflow-hidden shadow-lg">
+                <motion.div 
+                  className="aspect-[4/3] bg-gradient-to-br from-blue-100 to-orange-100 rounded-2xl overflow-hidden shadow-lg"
+                  whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+                >
                   <Image
-                    src="/api/placeholder/600/450"
-                    alt="Starken Group Office"
+                    src="https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="Starken Group Warehouse"
                     width={600}
                     height={450}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                </div>
+                </motion.div>
                 
                 {/* Floating Achievement Cards */}
-                <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg border border-gray-100">
+                <motion.div 
+                  className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg border border-gray-100"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.4, duration: 0.5 }}
+                >
                   <div className="flex items-center space-x-3">
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
                       <Award className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
                       <div className="font-bold text-gray-900">ISO Certified</div>
-                      <div className="text-sm text-gray-600">Quality Excellence</div>
+                      <div className="text-sm text-gray-600">Quality Materials</div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
                 
-                <div className="absolute -top-6 -right-6 bg-white rounded-xl p-4 shadow-lg border border-gray-100">
+                <motion.div 
+                  className="absolute -top-6 -right-6 bg-white rounded-xl p-4 shadow-lg border border-gray-100"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.6, duration: 0.5 }}
+                >
                   <div className="flex items-center space-x-3">
                     <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                      <Calendar className="w-6 h-6 text-orange-600" />
+                      <Warehouse className="w-6 h-6 text-orange-600" />
                     </div>
                     <div>
-                      <div className="font-bold text-gray-900">15+ Years</div>
-                      <div className="text-sm text-gray-600">Experience</div>
+                      <div className="font-bold text-gray-900">50K SqFt</div>
+                      <div className="text-sm text-gray-600">Warehouse</div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </motion.div>
           </div>
@@ -181,7 +194,7 @@ export default function AboutPreview() {
                 Our Foundation
               </h3>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                The principles that drive our commitment to excellence and guide every decision we make.
+                The principles that drive our commitment to supplying the finest construction materials and guide every decision we make.
               </p>
             </motion.div>
 
@@ -217,10 +230,10 @@ export default function AboutPreview() {
           <motion.div variants={containerVariants}>
             <motion.div variants={itemVariants} className="text-center mb-12">
               <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Key Achievements
+                Key Milestones
               </h3>
               <p className="text-lg text-gray-600">
-                Milestones that reflect our commitment to excellence and growth.
+                Achievements that reflect our commitment to excellence in construction materials supply.
               </p>
             </motion.div>
 

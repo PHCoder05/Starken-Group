@@ -1,189 +1,170 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Phone, Mail, Play, Star, Building, Calendar, Award, CheckCircle, MapPin, Zap, Shield, Clock } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Phone, Mail, Play, Star, Building, Calendar, Award, CheckCircle, MapPin, Zap, Shield, Clock, Users, Target, Package, Truck, Factory } from 'lucide-react';
 
 export function HeroSection() {
-  const [currentStat, setCurrentStat] = useState(0);
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
 
-  const stats = [
-    { icon: Building, number: "500+", label: "Projects Completed", color: "text-orange-500" },
-    { icon: Calendar, number: "15+", label: "Years Excellence", color: "text-blue-500" },
-    { icon: Award, number: "ISO", label: "9001:2015 Certified", color: "text-emerald-500" }
-  ];
-
-  const guarantees = [
-    { icon: CheckCircle, text: "Quality Assured Projects" },
-    { icon: Clock, text: "On-Time Delivery" },
-    { icon: Shield, text: "Safety First Approach" },
-    { icon: Zap, text: "24/7 Support" }
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentStat((prev) => (prev + 1) % stats.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, []);
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
-      {/* Clean Background Pattern */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] bg-[length:60px_60px] opacity-10"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 to-orange-500/20"></div>
-      </div>
-
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900">
+      {/* Animated Gradient Background */}
+      <motion.div
+        animate={{
+          background: [
+            "linear-gradient(135deg, #0f172a, #1e3a8a, #0f172a)",
+            "linear-gradient(135deg, #1e3a8a, #0f172a, #0f172a)",
+            "linear-gradient(135deg, #0f172a, #0f172a, #1e3a8a)",
+            "linear-gradient(135deg, #0f172a, #1e3a8a, #0f172a)",
+          ],
+        }}
+        transition={{
+          duration: 20,
+          ease: "linear",
+          repeat: Infinity,
+        }}
+        className="absolute inset-0 z-0"
+      />
+      
+      {/* Floating Shapes */}
+      {[...Array(5)].map((_, i) => (
+        <motion.div
+          key={i}
+          initial={{ y: -50, opacity: 0 }}
+          animate={{
+            y: "100vh",
+            x: `${Math.random() * 100}vw`,
+            rotate: Math.random() * 360,
+            scale: Math.random() * 0.5 + 0.5,
+          }}
+          transition={{
+            duration: Math.random() * 20 + 20,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut",
+            delay: i * 5,
+          }}
+          className="absolute w-20 h-20 bg-white/5 rounded-full blur-xl"
+        />
+      ))}
+      
       <div className="relative z-10 container mx-auto px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          
-          {/* Hero Content */}
-          <div className="text-center space-y-12 mb-20">
-            
-            {/* Certification Badge */}
-            <div className="flex justify-center">
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid lg:grid-cols-12 gap-12 items-center"
+        >
+          {/* Left Content Section */}
+          <motion.div variants={containerVariants} className="lg:col-span-7 space-y-8 text-center lg:text-left">
+            <motion.div variants={itemVariants}>
               <Badge className="bg-white/10 text-white border-white/20 backdrop-blur-sm px-6 py-3 text-base font-medium rounded-full">
                 <Star className="w-5 h-5 mr-2 text-yellow-400 fill-current" />
-                ISO 9001:2015 Certified Excellence
-                <div className="flex ml-3 space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}
-                </div>
+                ISO 9001:2015 Certified Quality Materials
               </Badge>
-            </div>
+            </motion.div>
+            
+            <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
+              Premium Construction Materials
+              <motion.span 
+                variants={itemVariants} 
+                className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 mt-2"
+              >
+                & Building Solutions
+              </motion.span>
+            </motion.h1>
+            
+            <motion.p variants={itemVariants} className="text-lg md:text-xl text-slate-300 max-w-2xl lg:mx-0 mx-auto leading-relaxed">
+              Your trusted supplier for high-quality construction materials from AAC blocks to home automation systems. We deliver reliability, durability, and innovation for all your building needs.
+            </motion.p>
 
-            {/* Main Headline */}
-            <div className="space-y-6">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight">
-                Building Tomorrow's
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 mt-2">
-                  Infrastructure
-                </span>
-                <span className="block text-white">Today</span>
-              </h1>
-              
-              <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-                Starken Group delivers world-class construction and real estate services with 
-                <span className="text-orange-400 font-semibold"> innovation, quality, and sustainability</span> 
-                at the forefront of every project.
-              </p>
-            </div>
+            <motion.div variants={itemVariants} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <Target className="w-8 h-8 text-orange-400" />
+                </div>
+                <div className="text-left">
+                  <h3 className="text-white font-semibold text-lg mb-2">Our Commitment</h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    To be the leading supplier of premium construction materials, setting new standards in quality, reliability, and customer service across all building projects.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
 
-            {/* Trust Guarantees */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              {guarantees.map((guarantee, index) => {
-                const Icon = guarantee.icon;
-                return (
-                  <div key={index} className="flex flex-col items-center space-y-2 group">
-                    <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-orange-500/20 transition-colors duration-300">
-                      <Icon className="w-6 h-6 text-orange-400" />
-                    </div>
-                    <span className="text-sm text-slate-300 text-center font-medium">{guarantee.text}</span>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
               <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group">
-                Explore Our Projects
+                View Our Products
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
               
               <Button variant="outline" size="lg" className="border-2 border-white/30 text-white hover:bg-white hover:text-slate-900 px-8 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm bg-white/5 transition-all duration-300 group">
-                <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-                Watch Our Story
+                <Package className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
+                Download Catalog
               </Button>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          {/* Stats Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
-              const isActive = currentStat === index;
-              return (
-                <div
-                  key={index}
-                  className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 transition-all duration-500 hover:bg-white/10 ${
-                    isActive ? 'scale-105 border-orange-400/50 shadow-2xl' : 'hover:scale-102'
-                  }`}
-                >
-                  <div className="text-center space-y-4">
-                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-white/10 ${stat.color} transition-transform duration-300 ${
-                      isActive ? 'scale-110' : ''
-                    }`}>
-                      <Icon className="w-8 h-8" />
-                    </div>
-                    
-                    <div>
-                      <div className={`text-4xl font-bold text-white transition-colors duration-300 ${
-                        isActive ? 'text-orange-400' : ''
-                      }`}>
-                        {stat.number}
-                      </div>
-                      <div className="text-slate-300 font-medium text-lg">
-                        {stat.label}
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {isActive && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-yellow-500/20 rounded-2xl -z-10 blur-xl"></div>
-                  )}
+          {/* Right Founder Profile Section */}
+          <motion.div variants={itemVariants} className="lg:col-span-5 flex justify-center lg:justify-end">
+            <motion.div 
+              whileHover={{ scale: 1.05, boxShadow: "0px 10px 30px rgba(0,0,0,0.3)" }}
+              className="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 max-w-sm w-full"
+            >
+              <div className="text-center space-y-4">
+                <div className="relative mx-auto w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden">
+                  <Image
+                    src="/founder profile.jpeg"
+                    alt="Founder - Starken Group"
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="top"
+                    className="border-4 border-white/30"
+                  />
                 </div>
-              );
-            })}
-          </div>
+                <div className="relative">
+                  <div className="absolute -bottom-2 right-1/2 translate-x-1/2 bg-orange-500 rounded-full p-2">
+                    <Award className="w-5 h-5 text-white" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-white font-bold text-xl">Industry Leadership</h3>
+                  <p className="text-slate-300 text-md">15+ Years in Materials Supply</p>
+                  <p className="text-orange-400 text-sm font-medium mt-1">Founder & Managing Director</p>
+                </div>
+                <div className="flex items-center justify-center space-x-4 text-sm text-slate-400 pt-2">
+                  <div className="flex items-center space-x-1">
+                    <Package className="w-4 h-4" />
+                    <span>10K+ Products</span>
+                  </div>
+                  <div className="flex items-center space-x-1">
+                    <Factory className="w-4 h-4" />
+                    <span>Quality Assured</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
 
-          {/* Contact Information */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center space-x-4 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-colors group cursor-pointer">
-              <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center group-hover:bg-blue-500/30 transition-colors">
-                <Phone className="w-6 h-6 text-blue-400" />
-              </div>
-              <div>
-                <div className="text-sm text-slate-400">Call Us Now</div>
-                <div className="font-semibold text-white">+91 98765 43210</div>
-              </div>
-            </div>
-            
-            <div className="flex items-center justify-center space-x-4 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-colors group cursor-pointer">
-              <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
-                <Mail className="w-6 h-6 text-orange-400" />
-              </div>
-              <div>
-                <div className="text-sm text-slate-400">Email Us</div>
-                <div className="font-semibold text-white">info@starkengroup.com</div>
-              </div>
-            </div>
-            
-            <div className="flex items-center justify-center space-x-4 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-colors group cursor-pointer">
-              <div className="w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center group-hover:bg-emerald-500/30 transition-colors">
-                <MapPin className="w-6 h-6 text-emerald-400" />
-              </div>
-              <div>
-                <div className="text-sm text-slate-400">Visit Us</div>
-                <div className="font-semibold text-white">Mumbai, India</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Scroll Indicator */}
-          <div className="flex justify-center mt-16">
-            <div className="animate-bounce">
-              <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-                <div className="w-1 h-3 bg-white rounded-full mt-2 animate-ping"></div>
-              </div>
-              <div className="text-center mt-2 text-slate-400 text-sm">Scroll to explore</div>
-            </div>
-          </div>
-
-        </div>
+        </motion.div>
       </div>
     </section>
   );

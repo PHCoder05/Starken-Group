@@ -2,49 +2,49 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Building2, Users, Calendar, Award, TrendingUp, CheckCircle, Globe, Target } from 'lucide-react'
+import { Package, Truck, Calendar, Award, TrendingUp, CheckCircle, Warehouse, Factory } from 'lucide-react'
 
 const stats = [
   {
-    icon: Building2,
-    number: "500+",
-    label: "Projects Completed",
-    description: "Successfully delivered across India",
+    icon: Package,
+    number: "10,000+",
+    label: "Products Supplied",
+    description: "Quality materials delivered nationwide",
     color: "from-blue-500 to-blue-600"
   },
   {
-    icon: Users,
-    number: "200+",
-    label: "Happy Clients",
-    description: "Trusted by leading organizations",
+    icon: Factory,
+    number: "500+",
+    label: "Projects Supplied",
+    description: "Trusted by construction companies",
     color: "from-orange-500 to-orange-600"
   },
   {
     icon: Calendar,
     number: "15+",
     label: "Years Experience",
-    description: "Excellence in construction industry",
+    description: "Excellence in materials supply",
     color: "from-emerald-500 to-emerald-600"
   },
   {
     icon: Award,
-    number: "25+",
-    label: "Awards Won",
-    description: "Recognition for quality & innovation",
+    number: "ISO",
+    label: "Quality Certified",
+    description: "International quality standards",
     color: "from-purple-500 to-purple-600"
   },
   {
-    icon: Globe,
-    number: "12+",
-    label: "Cities Covered",
-    description: "Pan-India presence & operations",
+    icon: Warehouse,
+    number: "50,000",
+    label: "SqFt Warehouse",
+    description: "Massive storage & distribution",
     color: "from-indigo-500 to-indigo-600"
   },
   {
-    icon: Target,
-    number: "95%",
+    icon: Truck,
+    number: "99%",
     label: "On-Time Delivery",
-    description: "Commitment to project timelines",
+    description: "Reliable logistics network",
     color: "from-red-500 to-red-600"
   }
 ]
@@ -88,12 +88,12 @@ const StatsSection = () => {
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Numbers That Speak 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500"> Excellence</span>
+              Trusted By Builders 
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500"> Nationwide</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Our commitment to excellence is reflected in every project we deliver. These numbers 
-              represent years of dedication, innovation, and trust earned from our clients.
+              Our commitment to quality construction materials is reflected in these numbers. 
+              Every statistic represents our dedication to delivering excellence in materials supply and customer service.
             </p>
           </motion.div>
 
@@ -144,7 +144,7 @@ const StatsSection = () => {
             <div className="inline-flex items-center space-x-2 text-gray-600">
               <CheckCircle className="w-5 h-5 text-emerald-500" />
               <span className="font-medium">
-                Join our growing list of satisfied clients across India
+                Join thousands of satisfied builders and contractors who trust our materials
               </span>
             </div>
           </motion.div>

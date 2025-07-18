@@ -9,56 +9,56 @@ const testimonials = [
   {
     id: 1,
     name: "Rajesh Kumar",
-    position: "Project Director",
-    company: "NHPC Limited",
-    image: "/api/placeholder/100/100",
-    content: "Starken Group delivered our infrastructure project with exceptional quality and ahead of schedule. Their attention to detail and commitment to excellence is unmatched in the industry.",
+    position: "Procurement Head",
+    company: "DLF India",
+    image: "https://images.pexels.com/photos/937481/pexels-photo-937481.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    content: "Starken's commitment to delivering high-quality construction materials is truly commendable. Their AAC blocks and adhesives have significantly improved our project efficiency and structural integrity.",
     rating: 5,
-    project: "Hydro Power Plant Construction",
-    value: "₹150 Crores"
+    project: "Commercial Projects",
+    value: "10,000+ Tons Supplied"
   },
   {
     id: 2,
     name: "Priya Sharma",
-    position: "Real Estate Manager",
+    position: "Quality Control Manager",
     company: "Tata Housing",
-    image: "/api/placeholder/100/100",
-    content: "Working with Starken Group was a game-changer for our residential project. They brought innovative solutions and maintained the highest standards throughout the construction process.",
+    image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    content: "The consistency and quality of readymix plaster from Starken have been a game-changer for our finishing work. Their reliable supply chain has helped us stay on schedule without any compromise on quality.",
     rating: 5,
-    project: "Luxury Residential Complex",
-    value: "₹200 Crores"
+    project: "Residential Complexes",
+    value: "500+ Metric Tons"
   },
   {
     id: 3,
     name: "Amit Patel",
-    position: "Chief Operations Officer",
-    company: "L&T Limited",
-    image: "/api/placeholder/100/100",
-    content: "The commercial complex built by Starken Group has exceeded our expectations. Their project management skills and technical expertise are truly world-class.",
+    position: "Lead Engineer",
+    company: "L&T Construction",
+    image: "https://images.pexels.com/photos/842571/pexels-photo-842571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    content: "Starken's rebar couplers and high-grade cement have met our stringent technical requirements for large-scale infrastructure projects. Their material expertise and support are invaluable.",
     rating: 5,
-    project: "IT Park Development",
-    value: "₹300 Crores"
+    project: "Infrastructure Projects",
+    value: "2,000+ Tonnes of Cement"
   },
   {
     id: 4,
-    name: "Dr. Sunita Mehta",
-    position: "Administrator",
-    company: "AIIMS Delhi",
-    image: "/api/placeholder/100/100",
-    content: "Starken Group's healthcare infrastructure development for our hospital expansion was executed flawlessly. They understood our specific requirements and delivered beyond expectations.",
+    name: "Sunita Mehta",
+    position: "Purchase Manager",
+    company: "Prestige Group",
+    image: "https://images.pexels.com/photos/936119/pexels-photo-936119.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    content: "We rely on Starken for a wide range of materials, from electrical wiring to specialized tile adhesives. Their comprehensive product range and commitment to quality make them our preferred supplier.",
     rating: 5,
-    project: "Hospital Infrastructure",
-    value: "₹80 Crores"
+    project: "Mixed-Use Developments",
+    value: "1,000+ SKU's Procured"
   }
 ]
 
 const clientLogos = [
-  { name: "NHPC", logo: "/api/placeholder/120/60" },
-  { name: "Tata Group", logo: "/api/placeholder/120/60" },
-  { name: "L&T", logo: "/api/placeholder/120/60" },
-  { name: "AIIMS", logo: "/api/placeholder/120/60" },
-  { name: "Reliance", logo: "/api/placeholder/120/60" },
-  { name: "Wipro", logo: "/api/placeholder/120/60" }
+  { name: "DLF India", logo: "https://images.pexels.com/photos/2239655/pexels-photo-2239655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+  { name: "Tata Housing", logo: "https://images.pexels.com/photos/2239655/pexels-photo-2239655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+  { name: "L&T Construction", logo: "https://images.pexels.com/photos/2239655/pexels-photo-2239655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+  { name: "Prestige Group", logo: "https://images.pexels.com/photos/2239655/pexels-photo-2239655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+  { name: "Godrej Properties", logo: "https://images.pexels.com/photos/2239655/pexels-photo-2239655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+  { name: "Omaxe Ltd", logo: "https://images.pexels.com/photos/2239655/pexels-photo-2239655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" }
 ]
 
 export default function TestimonialsSection() {

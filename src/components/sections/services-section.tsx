@@ -2,55 +2,90 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Building2, Home, Factory, Wrench, Shield, Users, ArrowRight, CheckCircle, Zap, Target } from 'lucide-react'
+import { Building2, Wrench, Zap, Home, Shield, Package, ArrowRight, CheckCircle, Truck, Factory, Settings } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { SmartImage } from '@/components/ui/image-placeholder'
 
-const services = [
+const materials = [
   {
     icon: Building2,
-    title: "Infrastructure Development",
-    description: "Large-scale infrastructure projects including bridges, highways, and public facilities with cutting-edge engineering solutions.",
-    features: ["Highway Construction", "Bridge Engineering", "Public Infrastructure", "Urban Planning"],
-    image: "/api/placeholder/600/400",
+    title: "AAC BLOCKS",
+    description: "Lightweight autoclaved aerated concrete blocks providing excellent thermal insulation and fire resistance for modern construction.",
+    features: ["Lightweight & Strong", "Fire Resistant", "Thermal Insulation", "Eco-Friendly"],
     color: "from-blue-500 to-blue-600",
     borderColor: "border-blue-500",
     textColor: "text-blue-600",
     bgColor: "bg-blue-50"
   },
   {
-    icon: Home,
-    title: "Residential Construction",
-    description: "Premium residential developments from luxury villas to affordable housing projects with sustainable design principles.",
-    features: ["Luxury Villas", "Apartment Complexes", "Affordable Housing", "Smart Homes"],
-    image: "/api/placeholder/600/400",
+    icon: Package,
+    title: "READYMIX PLASTER",
+    description: "High-quality ready-to-use plaster mix ensuring consistent finish and superior wall protection for all construction projects.",
+    features: ["Ready to Use", "Consistent Quality", "Time Saving", "Superior Finish"],
+    color: "from-slate-500 to-slate-600",
+    borderColor: "border-slate-500",
+    textColor: "text-slate-600",
+    bgColor: "bg-slate-50"
+  },
+  {
+    icon: Wrench,
+    title: "REBAR COUPLER",
+    description: "Mechanical reinforcement connectors providing stronger joints than traditional overlapping methods for structural integrity.",
+    features: ["High Strength", "Easy Installation", "Cost Effective", "Reliable Joints"],
+    color: "from-gray-600 to-gray-700",
+    borderColor: "border-gray-600",
+    textColor: "text-gray-700",
+    bgColor: "bg-gray-50"
+  },
+  {
+    icon: Factory,
+    title: "PREMIUM CEMENT",
+    description: "Top-grade cement meeting all international standards for durability and strength in residential and commercial construction.",
+    features: ["High Grade Quality", "Consistent Strength", "Durability Tested", "Multiple Grades"],
+    color: "from-stone-500 to-stone-600",
+    borderColor: "border-stone-500",
+    textColor: "text-stone-600",
+    bgColor: "bg-stone-50"
+  },
+  {
+    icon: Zap,
+    title: "ELECTRICAL SOLUTIONS",
+    description: "Complete electrical wiring systems and components designed for safety and efficiency in modern building projects.",
+    features: ["Complete Systems", "Safety Standards", "Modern Technology", "Professional Grade"],
+    color: "from-yellow-500 to-yellow-600",
+    borderColor: "border-yellow-500",
+    textColor: "text-yellow-600",
+    bgColor: "bg-yellow-50"
+  },
+  {
+    icon: Shield,
+    title: "ANCHORS & FASTENERS",
+    description: "Heavy-duty anchoring solutions and fasteners designed for structural applications requiring maximum holding power.",
+    features: ["Heavy Duty", "Corrosion Resistant", "Multiple Sizes", "Structural Grade"],
     color: "from-orange-500 to-orange-600",
     borderColor: "border-orange-500",
     textColor: "text-orange-600",
     bgColor: "bg-orange-50"
   },
   {
-    icon: Factory,
-    title: "Commercial Projects",
-    description: "State-of-the-art commercial buildings, office complexes, and industrial facilities designed for modern business needs.",
-    features: ["Office Buildings", "Shopping Centers", "Industrial Plants", "Warehouses"],
-    image: "/api/placeholder/600/400",
+    icon: Package,
+    title: "TILE ADHESIVES",
+    description: "High-performance adhesives for tile and stone installation providing long-lasting bonds in all weather conditions.",
+    features: ["Strong Bond", "Weather Resistant", "Easy Application", "Long Lasting"],
     color: "from-emerald-500 to-emerald-600",
     borderColor: "border-emerald-500",
     textColor: "text-emerald-600",
     bgColor: "bg-emerald-50"
   },
   {
-    icon: Wrench,
-    title: "Engineering Services",
-    description: "Comprehensive engineering solutions including structural design, MEP services, and project management consulting.",
-    features: ["Structural Design", "MEP Services", "Project Management", "Quality Assurance"],
-    image: "/api/placeholder/600/400",
-    color: "from-purple-500 to-purple-600",
-    borderColor: "border-purple-500",
-    textColor: "text-purple-600",
-    bgColor: "bg-purple-50"
+    icon: Settings,
+    title: "HOME AUTOMATION",
+    description: "Smart home automation systems bringing modern technology to residential and commercial building projects.",
+    features: ["Smart Controls", "Energy Efficient", "Remote Access", "Future Ready"],
+    color: "from-teal-500 to-teal-600",
+    borderColor: "border-teal-500",
+    textColor: "text-teal-600",
+    bgColor: "bg-teal-50"
   }
 ]
 
@@ -94,22 +129,22 @@ export default function ServicesSection() {
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500"> Services</span>
+              Our Construction
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500"> Materials Range</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              From concept to completion, we provide comprehensive construction and real estate services 
-              that transform visions into reality with uncompromising quality and innovation.
+              From foundation to finishing, we supply premium construction materials that meet international quality standards. 
+              Every product is certified and tested for reliability and durability.
             </p>
           </motion.div>
 
-          {/* Services Grid */}
+          {/* Materials Grid */}
           <motion.div 
             variants={containerVariants}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
           >
-            {services.map((service, index) => {
-              const Icon = service.icon
+            {materials.map((material, index) => {
+              const Icon = material.icon
               const isHovered = hoveredIndex === index
               
               return (
@@ -119,59 +154,47 @@ export default function ServicesSection() {
                   onHoverStart={() => setHoveredIndex(index)}
                   onHoverEnd={() => setHoveredIndex(null)}
                   whileHover={{ y: -8, transition: { duration: 0.2 } }}
-                  className="group"
+                  className="group h-full"
                 >
                   <Card className="h-full bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-                    <CardContent className="p-0">
-                      {/* Image Section */}
-                      <div className="relative h-64 overflow-hidden">
-                        <SmartImage
-                          src={service.image}
-                          alt={service.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                        <div className={`absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent`}></div>
-                        
-                        {/* Icon Overlay */}
-                        <div className="absolute top-6 left-6">
-                          <div className={`w-16 h-16 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center ${isHovered ? 'scale-110' : ''} transition-transform duration-300`}>
-                            <Icon className="w-8 h-8 text-white" />
-                          </div>
-                        </div>
-                        
-                        {/* Title Overlay */}
-                        <div className="absolute bottom-6 left-6 right-6">
-                          <h3 className="text-2xl font-bold text-white mb-2">
-                            {service.title}
-                          </h3>
+                    <CardContent className="p-6 h-full flex flex-col">
+                      {/* Icon */}
+                      <div className="mb-4">
+                        <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${material.color} flex items-center justify-center ${isHovered ? 'scale-110' : ''} transition-transform duration-300`}>
+                          <Icon className="w-7 h-7 text-white" />
                         </div>
                       </div>
 
-                      {/* Content Section */}
-                      <div className="p-8">
-                        <p className="text-gray-600 leading-relaxed mb-6">
-                          {service.description}
+                      {/* Content */}
+                      <div className="flex-1 space-y-4">
+                        <h3 className="text-lg font-bold text-gray-900">
+                          {material.title}
+                        </h3>
+                        
+                        <p className="text-sm text-gray-600 leading-relaxed">
+                          {material.description}
                         </p>
 
                         {/* Features List */}
-                        <div className="grid grid-cols-2 gap-3 mb-6">
-                          {service.features.map((feature, featureIndex) => (
+                        <div className="space-y-2">
+                          {material.features.map((feature, featureIndex) => (
                             <div key={featureIndex} className="flex items-center space-x-2">
-                              <CheckCircle className={`w-4 h-4 ${service.textColor}`} />
-                              <span className="text-sm text-gray-700 font-medium">{feature}</span>
+                              <CheckCircle className={`w-3 h-3 ${material.textColor}`} />
+                              <span className="text-xs text-gray-700 font-medium">{feature}</span>
                             </div>
                           ))}
                         </div>
-
-                        {/* CTA Button */}
-                        <Button 
-                          variant="outline" 
-                          className={`w-full ${service.borderColor} ${service.textColor} hover:bg-gradient-to-r ${service.color} hover:text-white hover:border-transparent transition-all duration-300 group`}
-                        >
-                          Learn More
-                          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-                        </Button>
                       </div>
+
+                      {/* CTA Button */}
+                      <Button 
+                        variant="outline" 
+                        size="sm"
+                        className={`w-full mt-4 ${material.borderColor} ${material.textColor} hover:bg-gradient-to-r ${material.color} hover:text-white hover:border-transparent transition-all duration-300 group`}
+                      >
+                        Get Quote
+                        <ArrowRight className="ml-2 h-3 w-3 group-hover:translate-x-1 transition-transform duration-300" />
+                      </Button>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -179,23 +202,78 @@ export default function ServicesSection() {
             })}
           </motion.div>
 
+          {/* Featured Categories */}
+          <motion.div 
+            variants={containerVariants}
+            className="grid md:grid-cols-3 gap-6 mb-16"
+          >
+            <motion.div variants={itemVariants} className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <Building2 className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900">Structural Materials</h3>
+              </div>
+              <p className="text-gray-600 text-sm mb-4">
+                AAC blocks, cement, rebar couplers for strong foundations and structures.
+              </p>
+              <div className="flex items-center text-blue-600 text-sm font-medium">
+                <Truck className="w-4 h-4 mr-2" />
+                Bulk delivery available
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                  <Package className="w-6 h-6 text-orange-600" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900">Finishing Materials</h3>
+              </div>
+              <p className="text-gray-600 text-sm mb-4">
+                Plasters, adhesives, grouts for perfect finishing and aesthetics.
+              </p>
+              <div className="flex items-center text-orange-600 text-sm font-medium">
+                <Shield className="w-4 h-4 mr-2" />
+                Quality guaranteed
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center">
+                  <Settings className="w-6 h-6 text-emerald-600" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900">Smart Solutions</h3>
+              </div>
+              <p className="text-gray-600 text-sm mb-4">
+                Home automation, electrical systems for modern smart buildings.
+              </p>
+              <div className="flex items-center text-emerald-600 text-sm font-medium">
+                <Zap className="w-4 h-4 mr-2" />
+                Latest technology
+              </div>
+            </motion.div>
+          </motion.div>
+
           {/* Bottom CTA Section */}
           <motion.div 
             variants={itemVariants}
-            className="text-center bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100"
+            className="text-center bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl p-8 md:p-12 text-white"
           >
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Ready to Start Your Project?
+            <h3 className="text-3xl font-bold mb-4">
+              Need Bulk Materials for Your Project?
             </h3>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let's discuss how we can bring your construction vision to life with our expertise and commitment to excellence.
+            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+              Get competitive quotes for bulk orders and enjoy volume discounts on all construction materials. 
+              Expert consultation and logistics support included.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8">
-                Get Free Consultation
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8">
+                Get Bulk Quote
               </Button>
-              <Button variant="outline" size="lg" className="border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white px-8">
-                View Our Portfolio
+              <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8">
+                Download Product Catalog
               </Button>
             </div>
           </motion.div>

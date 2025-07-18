@@ -15,9 +15,12 @@ export default function ContactPage() {
     phone: '',
     company: '',
     service: '',
+    projectType: '',
     budget: '',
-    message: '',
-    projectType: ''
+    urgency: '',
+    quantity: '',
+    deliveryLocation: '',
+    message: ''
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -49,9 +52,12 @@ export default function ContactPage() {
         phone: '',
         company: '',
         service: '',
+        projectType: '',
         budget: '',
-        message: '',
-        projectType: ''
+        urgency: '',
+        quantity: '',
+        deliveryLocation: '',
+        message: ''
       })
     }, 3000)
   }
@@ -66,24 +72,57 @@ export default function ContactPage() {
   }
 
   const services = [
-    "Residential Construction",
-    "Commercial Development", 
-    "Industrial Infrastructure",
-    "Real Estate Development",
-    "Project Management",
-    "Interior Design",
-    "Architecture Services",
-    "Consultation Services",
+    "AAC Blocks Supply",
+    "Cement Supply",
+    "Ready Mix Plaster",
+    "Tile & Stone Adhesives",
+    "Marble Adhesives",
+    "Grout & Micro Concrete",
+    "Rebar Couplers",
+    "Anchors & Fasteners",
+    "Electrical Materials",
+    "Home Automation Systems",
+    "Bulk Material Supply",
+    "Technical Consultation",
+    "Quality Testing Services",
+    "Logistics & Delivery",
+    "Other Construction Materials"
+  ]
+
+  const projectTypes = [
+    "Residential Building",
+    "Commercial Complex",
+    "Industrial Facility",
+    "Infrastructure Project",
+    "Renovation/Remodeling",
+    "Interior Fit-out",
+    "Exterior Cladding",
+    "Foundation Work",
+    "High-rise Construction",
+    "Low-rise Construction",
+    "Warehouse/Storage",
+    "Educational Institution",
+    "Healthcare Facility",
+    "Hotel/Resort",
     "Other"
   ]
 
   const budgetRanges = [
-    "Under ₹50 Lakhs",
+    "Under ₹10 Lakhs",
+    "₹10 Lakhs - ₹50 Lakhs",
     "₹50 Lakhs - ₹1 Crore",
     "₹1 Crore - ₹5 Crores",
     "₹5 Crores - ₹10 Crores",
     "₹10 Crores - ₹50 Crores",
     "Above ₹50 Crores"
+  ]
+
+  const urgencyLevels = [
+    "Immediate (Within 1 week)",
+    "Urgent (Within 2 weeks)",
+    "Standard (Within 1 month)",
+    "Planned (1-3 months)",
+    "Future Project (3+ months)"
   ]
 
   const contactMethods = [
@@ -143,50 +182,21 @@ export default function ContactPage() {
       <Navbar siteType="starken-group" />
 
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] bg-[length:60px_60px] opacity-10"></div>
-        
-        <div className="relative z-10 container mx-auto px-6 lg:px-8">
+      <section className="relative pt-24 pb-16 bg-gradient-to-br from-primary-900 via-primary-800 to-construction-orange overflow-hidden">
+        <div className="absolute inset-0 bg-construction-pattern opacity-10" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={containerVariants}
-            className="max-w-4xl mx-auto text-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
           >
-            <motion.div variants={itemVariants}>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Get In 
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400"> Touch</span>
-              </h1>
-              <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-                Ready to start your construction project? Contact our expert team 
-                for consultation, quotes, and professional guidance.
-              </p>
-            </motion.div>
-
-            {/* Quick Stats */}
-            <motion.div variants={containerVariants} className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-              <motion.div variants={itemVariants} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <Phone className="w-8 h-8 text-blue-400 mx-auto mb-3" />
-                <div className="text-2xl font-bold text-white">24/7</div>
-                <div className="text-sm text-slate-300">Support Available</div>
-              </motion.div>
-              <motion.div variants={itemVariants} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <Clock className="w-8 h-8 text-orange-400 mx-auto mb-3" />
-                <div className="text-2xl font-bold text-white">&lt;2h</div>
-                <div className="text-sm text-slate-300">Response Time</div>
-              </motion.div>
-              <motion.div variants={itemVariants} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <Shield className="w-8 h-8 text-emerald-400 mx-auto mb-3" />
-                <div className="text-2xl font-bold text-white">100%</div>
-                <div className="text-sm text-slate-300">Confidential</div>
-              </motion.div>
-              <motion.div variants={itemVariants} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <Star className="w-8 h-8 text-yellow-400 mx-auto mb-3" />
-                <div className="text-2xl font-bold text-white">500+</div>
-                <div className="text-sm text-slate-300">Happy Clients</div>
-              </motion.div>
-            </motion.div>
+            <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">
+              Contact <span className="text-construction-yellow">Us</span>
+            </h1>
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-8">
+              Ready to start your construction project? Get in touch with our materials experts for quality products, competitive pricing, and reliable delivery.
+            </p>
           </motion.div>
         </div>
       </section>
@@ -372,6 +382,27 @@ export default function ContactPage() {
                     
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Project Type
+                      </label>
+                      <select
+                        name="projectType"
+                        value={formData.projectType}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      >
+                        <option value="">Select project type</option>
+                        {projectTypes.map((type) => (
+                          <option key={type} value={type}>
+                            {type}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
                         Project Budget
                       </label>
                       <select
@@ -388,6 +419,55 @@ export default function ContactPage() {
                         ))}
                       </select>
                     </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Urgency Level
+                      </label>
+                      <select
+                        name="urgency"
+                        value={formData.urgency}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      >
+                        <option value="">Select urgency</option>
+                        {urgencyLevels.map((level) => (
+                          <option key={level} value={level}>
+                            {level}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Estimated Quantity
+                      </label>
+                      <input
+                        type="text"
+                        name="quantity"
+                        value={formData.quantity}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                        placeholder="e.g., 1000 sq ft, 50 tons, etc."
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Delivery Location
+                      </label>
+                      <input
+                        type="text"
+                        name="deliveryLocation"
+                        value={formData.deliveryLocation}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                        placeholder="City, State, Pincode"
+                      />
+                    </div>
                   </div>
 
                   <div>
@@ -403,7 +483,7 @@ export default function ContactPage() {
                         required
                         rows={5}
                         className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
-                        placeholder="Please describe your project requirements, timeline, location, and any specific needs..."
+                        placeholder="Please describe your specific material requirements, technical specifications, project timeline, quality standards, and any special requirements. Include details about site conditions, weather considerations, and delivery preferences."
                       />
                     </div>
                   </div>

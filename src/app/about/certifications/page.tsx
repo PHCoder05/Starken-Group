@@ -38,7 +38,7 @@ const certifications = [
     description: "Environmental management standard ensuring our commitment to environmental protection and sustainable practices.",
     category: "Environmental",
     icon: CheckCircle,
-    image: "/api/placeholder/400/300",
+    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
     color: "from-emerald-500 to-emerald-600",
     benefits: [
       "Environmental impact reduction",
@@ -76,7 +76,7 @@ const certifications = [
     description: "Professional credential demonstrating knowledge of green building practices and LEED rating system.",
     category: "Green Building",
     icon: Star,
-    image: "/api/placeholder/400/300",
+    image: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=600",
     color: "from-green-500 to-green-600",
     benefits: [
       "Green building expertise",
@@ -95,7 +95,7 @@ const certifications = [
     description: "Official registration as a Micro, Small & Medium Enterprise, enabling access to government schemes and benefits.",
     category: "Government",
     icon: Building2,
-    image: "/api/placeholder/400/300",
+    image: "https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=600",
     color: "from-purple-500 to-purple-600",
     benefits: [
       "Government scheme access",
@@ -114,7 +114,7 @@ const certifications = [
     description: "Membership in India's premier real estate developers' association, demonstrating credibility and industry recognition.",
     category: "Industry Association",
     icon: Award,
-    image: "/api/placeholder/400/300",
+    image: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=600",
     color: "from-indigo-500 to-indigo-600",
     benefits: [
       "Industry networking",

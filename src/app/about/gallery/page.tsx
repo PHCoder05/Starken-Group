@@ -27,7 +27,7 @@ const galleryItems = [
     location: "Mumbai, Maharashtra",
     date: "December 2023",
     description: "Spectacular aerial view of our completed luxury residential complex featuring 200+ apartments with modern amenities.",
-    image: "/api/placeholder/800/600",
+    image: "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["Residential", "Completed", "Luxury", "Mumbai"]
   },
   {
@@ -37,7 +37,7 @@ const galleryItems = [
     location: "Pune, Maharashtra",
     date: "November 2023",
     description: "Grand opening ceremony of Metro Business Center with distinguished guests and stakeholders celebrating the milestone.",
-    image: "/api/placeholder/800/600",
+    image: "https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["Commercial", "Event", "Opening", "Celebration"]
   },
   {
@@ -47,7 +47,7 @@ const galleryItems = [
     location: "Delhi-NCR",
     date: "October 2023",
     description: "Construction progress of the 5km highway bridge project showcasing advanced engineering and construction techniques.",
-    image: "/api/placeholder/800/600",
+    image: "https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["Infrastructure", "Bridge", "Highway", "Construction"]
   },
   {
@@ -57,7 +57,7 @@ const galleryItems = [
     location: "New Delhi",
     date: "September 2023",
     description: "Receiving the prestigious Industry Leadership Award for excellence in construction and real estate development.",
-    image: "/api/placeholder/800/600",
+    image: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["Award", "Recognition", "Leadership", "Achievement"]
   },
   {
@@ -67,7 +67,7 @@ const galleryItems = [
     location: "Bangalore, Karnataka",
     date: "August 2023",
     description: "Eco-friendly residential township featuring sustainable living solutions and modern infrastructure.",
-    image: "/api/placeholder/800/600",
+    image: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["Residential", "Eco-friendly", "Township", "Sustainable"]
   },
   {
@@ -77,7 +77,7 @@ const galleryItems = [
     location: "Lonavala, Maharashtra",
     date: "July 2023",
     description: "Annual team building event bringing together employees from all departments for collaboration and fun activities.",
-    image: "/api/placeholder/800/600",
+    image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["Team", "Event", "Building", "Collaboration"]
   },
   {
@@ -87,7 +87,7 @@ const galleryItems = [
     location: "Hyderabad, Telangana",
     date: "June 2023",
     description: "Construction of modern IT park with Grade-A office spaces and world-class amenities for tech companies.",
-    image: "/api/placeholder/800/600",
+    image: "https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["Commercial", "IT Park", "Construction", "Technology"]
   },
   {
@@ -97,7 +97,7 @@ const galleryItems = [
     location: "Mumbai, Maharashtra",
     date: "May 2023",
     description: "Recognition for maintaining highest safety standards across all construction sites and achieving zero accidents.",
-    image: "/api/placeholder/800/600",
+    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["Safety", "Award", "Excellence", "Recognition"]
   },
   {
@@ -107,7 +107,7 @@ const galleryItems = [
     location: "Chennai, Tamil Nadu",
     date: "April 2023",
     description: "Modern metro station with passenger amenities, retail spaces, and integrated transportation facilities.",
-    image: "/api/placeholder/800/600",
+    image: "https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["Infrastructure", "Metro", "Transportation", "Public"]
   },
   {
@@ -117,7 +117,7 @@ const galleryItems = [
     location: "Pune, Maharashtra",
     date: "March 2023",
     description: "Annual company meeting celebrating achievements, sharing future vision, and recognizing outstanding performers.",
-    image: "/api/placeholder/800/600",
+    image: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["Annual", "Meet", "Company", "Achievement"]
   },
   {
@@ -127,7 +127,7 @@ const galleryItems = [
     location: "Indore, Madhya Pradesh",
     date: "February 2023",
     description: "Progress on smart city infrastructure including roads, utilities, smart lighting, and digital connectivity systems.",
-    image: "/api/placeholder/800/600",
+    image: "https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["Smart City", "Infrastructure", "Technology", "Development"]
   },
   {
@@ -137,7 +137,7 @@ const galleryItems = [
     location: "Bangalore, Karnataka",
     date: "January 2023",
     description: "Recognition for innovative construction technologies and digital transformation initiatives in the industry.",
-    image: "/api/placeholder/800/600",
+    image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800",
     tags: ["Innovation", "Technology", "Digital", "Excellence"]
   }
 ]
